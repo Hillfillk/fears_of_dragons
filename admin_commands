@@ -1,0 +1,5 @@
+//Place in a repeating command block in the world spawn chunks to disable all mob ai//
+execute as @e[type=!item,type=!minecraft:armor_stand,type=!falling_block,type=!item_frame,type=!painting,type=!minecart,type=!boat,type=!create:stationary_contraption,type=!minecraft:lightning_bolt,type=!minecraft:area_effect_cloud,type=!iceandfire:dragon_multipart,type=!iceandfire:hydra_multipart,type=!iceandfire:multipart,type=!chest_minecart,nbt=!{NoAI:1b}] run data modify entity @s NoAI set value 1b
+
+//The Cyclops mob cause issues with the above command, place this in a chain command block connected to the repeating command block//
+kill @e[type=iceandfire:cyclops]
